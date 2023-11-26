@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en" xmlns="https://www.thymeleaf.org">
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(217, 166, 213)
+}
+h1{
+	 text-shadow: 2px 2px 5px rgba(1, 1, 0, 0.5);
+}
+h2{
+text-shadow: 2px 2px 5px rgba(1, 1, 0, 0.5);	
+}
+
+.container {
+    width: 300px;
+    padding: 16px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 100px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+input[type=text], input[type=tel] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: rgb(0, 128, 0);
+    color: rgb(0, 0, 0);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+</style>
+</head>
+<body>
+
+<form  th:action="@{/registerStudent}" th:object="${student}" method="post">
+	<h1 style="text-align: center; color: rgb(0, 0, 0);"> छत्रपती संभाजी महाराज राष्ट्रीय विमानतळ  </h1>
+<h1 style="text-align: center; color: rgb(0, 0, 0);">  छत्रपती संभाजीनगर </h1>
+
+<div class="container">
+ <label for="id"><b>आयडी </b></label>
+ <input type="text" placeholder="Enter ID" name="id" id="id" required>
+
+ <label for="name"><b>नाव </b></label>
+ <input type="text" placeholder="Enter Name" name="name" id="name" required>
+
+ <label for="address"><b>पता </b></label>
+ <input type="text" placeholder="Enter Address" name="address" id="address" required>
+
+ <label for="phone"><b>फोन नंबर </b></label>
+ <input type="tel" placeholder="Enter Phone" name="phone" id="phone" required>
+
+
+ <label for="phone"><b>जात  </b></label>
+ <input type="tel" placeholder="Enter Phone" name="phone" id="phone" required>
+ 
+  <label for="phone"><b>देश  </b></label>
+ <input type="tel" placeholder="Enter Phone" name="phone" id="phone" required>
+ <button type="submit">Submit</button>
+</div>
+</form>
+</body>
+</html>
