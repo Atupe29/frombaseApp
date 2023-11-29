@@ -5,7 +5,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "Student")
+@Table(name = "Arjun")
 public class Student {
 	@Id
 
@@ -15,6 +15,8 @@ public class Student {
 	private String phone;
 	private String cast;
 	private String country;
+	
+	
 	public Integer getId() {
 		return id;
 	}
